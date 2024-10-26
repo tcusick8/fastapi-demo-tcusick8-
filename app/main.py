@@ -5,6 +5,8 @@ from typing import Optional
 from pydantic import BaseModel
 import json
 import os
+import math
+
 
 app = FastAPI()
 
@@ -27,3 +29,13 @@ def square(e: int):
 @app.get("/divide/{f}/{g}")
 def divide(f: int, g: int):
     return {"quotient": f / g}
+
+@app.get("/sqrt/{h}")
+def sqrt(h: int):
+    if h < 0:
+        return {"error": "Cannot take the square root of a negative number"}
+    return {"square_root": math.sqrt(h)}
+
+@app.get("/power/{base}/{exponent}")
+def power(base: int, exponent: int):
+    return {"result": math.pow(base, exponent)}
