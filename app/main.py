@@ -20,6 +20,10 @@ def add(a: int, b: int):
 def multiply (c: int, d: int):
     return {"product": c * d}
 
-@app.get("/square/{a}")
-def square(a: int):
-    return {"product": a * a}
+@app.get("/square/{e}")
+def square(e: int):
+    return {"product": e * e}
+
+@app.get("/divide/{f}/{g}")
+def divide(f: int, g: int):
+    return {"quotient": f / g}
