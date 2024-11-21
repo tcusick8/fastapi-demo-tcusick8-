@@ -105,8 +105,8 @@ def get_songs():
         songs.album AS album,
         songs.artist AS artist,
         songs.year AS year,
-        CONCAT('https://your-s3-bucket.s3.amazonaws.com/', songs.file) AS file,
-        CONCAT('https://your-s3-bucket.s3.amazonaws.com/', songs.image) AS image,
+        CONCAT('http://tpg6hu-dp1-spotify.s3-website-us-east-1.amazonaws.com/, songs.file) AS file,
+        CONCAT('http://tpg6hu-dp1-spotify.s3-website-us-east-1.amazonaws.com/', songs.image) AS image,
         genres.genre AS genre
     FROM 
         songs
