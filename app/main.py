@@ -24,6 +24,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+@app.get("/")  # zone apex
+def zone_apex():   
+    return {"Hello": "my best friend!"}
+
 DBHOST = "ds2022.cqee4iwdcaph.us-east-1.rds.amazonaws.com"
 DBUSER = "admin"
 DBPASS = os.getenv('DBPASS')
